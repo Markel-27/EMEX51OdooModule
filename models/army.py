@@ -7,11 +7,9 @@ from odoo import models,fields
 class Army (models.Model):
     #Esta es la referencia odoo. Como project.task. Task es una clase del modulo project.
     #Nuestro modulo en odoo es emex51.
-    _name = 'emex51.army'
-    _inherit = 'emex51.sectorcontent'
-    
-    # Declaración de los atributos de tipo básico de en Odoo.
-    
+    _name = 'emex51_module.army'
+    _inherit = 'emex51_module.sectorcontent'    
+    # Declaracion de los atributos de tipo basico de en Odoo.
     #El atributo string es como se ve en el form de la view de odoo. id lo crea odoo. Es un field reserved.
-    ammunition = fields.Integer(required = True, string = "Munición Total")
+    ammunition = fields.Integer(required = True, string = "Municion Total")
 

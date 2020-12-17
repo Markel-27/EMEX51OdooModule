@@ -7,19 +7,18 @@ from odoo import models,fields
 class Sector (models.Model):
     #Esta es la referencia odoo. Como project.task. Task es una clase del modulo project.
     #Nuestro modulo en odoo es emex51.
-    _name = 'emex51.sector'
-    
-    # Declaración de los atributos de tipo básico de en Odoo.
-    
-    #El atributo string es como se ve en el form de la view de odoo. id lo crea odoo. Es un field reserved.
+    _name = 'emex51_module.sector'
+    # Declaracion de los atributos de tipo basico de en Odoo.
+    #El atributo string es como se ve en el form de la view de odoo.
+#id lo crea odoo. Es un field reserved.
     name = fields.Char(required = True, string = "Nombre")
-    tipo = fields.Selection(selection=[('criature','army'),])
-    
-    #Declaración de los atributos relacionales con otras clases.
-    
-    #Un empleado gestiona varios sectores, un sector en gestionado por varios empleados
-    empleados = fields.One2many('emex51.sectoremployees','sectores',string="Empleados")
+    tipo = fields.Selection(selection=[('creature','Creature'),('army','Army')])
+    #Declaracion de los atributos relacionales con otras clases.
+    #Un empleado gestiona varios sectores, un sector en gestionado por varios empleados.
+# NM con atributos clase intermedia dos 1N
+    employees = fields.One2many('emex51_module.sectoremployees','sectors',string="Empleados")
     #Un visitante visita varios sectores, un sector es visitado por varios  visitantes
-    visitantes = fields.Many2many('emex51.visitor',string="Visitantes")
-    #En un sector hay varias existencias y una existencia está en un sector. Estas pueden ser armas o criaturas
-    contenido = fields.One2many('emex51.existence','sector',string="Contenido")
+    visitors = fields.Many2many('emex51_module.visitor',string="Visitantes")
+    #En un sector hay varias existencias y una existencia esta en un sector.
+# Estas pueden ser armas o criaturas
+    content = fields.One2many('emex51_module.sectorcontent','sector',string="Contenido")

@@ -5,14 +5,12 @@
 from odoo import models,fields
 #Esto es como se declara una clase en Phyton. Esta clase hereda todos los atributos de Model.
 class Boss (models.Model):
-    #Vamos a hacer una herencia de la clase user que existe en Odoo, añadiremos atributos extra que necesitamos para nuestro módulo
-    _name = "emex51.boss"
+    #Vamos a hacer una herencia de la clase user que existe en Odoo,
+#anadiremos atributos extra que necesitamos para nuestro modulo
+    _name = 'emex51_module.boss'
     _inherit = 'res.users'
-    
-    # Declaración de los atributos de tipo básico de en Odoo.
+    # Declaracion de los atributos de tipo basico de en Odoo.
     wage = fields.Float(string = "Salario")
-    
-    #Declaración de los atributos relacionales con otras clases.
-    
+    #Declaracion de los atributos relacionales con otras clases.
     #Un jefe gestiona varios empleados.
-    empleados = fields.One2many ('emex51.employee','jefe', string = "Empleados")
+    employees = fields.One2many ('emex51_module.employee','boss', string = "Empleados")
