@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<odoo>
+    <data>
+        <menuitem name="AREA 51" id="main_emex51_module_menu"/>
+        <menuitem name="Usuarios" id="emex51_module_users" parent="main_emex51_module_menu"/>
+        <menuitem name="Empleados" id="emex51_module_employees" parent="emex51_module_users"
+              action="emex51_module_employee_action"/>
+        <menuitem name="Jefes" id="emex51_module_bosses" parent="emex51_module_users"
+              action="emex51_module_boss_action"/>
+        <menuitem name="Sectores" id="emex51_module_sector" parent="main_emex51_module_menu"
+              action="emex51_module_sector_action"/>
+        <menuitem name="Contenido" id="emex51_module_content" parent="main_emex51_module_menu"/>
+        <menuitem name="Armamento" id="emex51_module_army" parent="emex51_module_content"
+              action="emex51_module_army_action"/>
+        <menuitem name="Creaturas" id="emex51_module_creature" parent="emex51_module_content"
+              action="emex51_module_creature_action"/>
+    </data>   
+</odoo>

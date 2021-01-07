@@ -11,7 +11,7 @@ class Visitor (models.Model):
     # Declaracion de los atributos de tipo basico de en Odoo.
     #La clase res.users ya contiene name, email, password, login, login_date (lastConnection)
     dni = fields.Char(string = "DNI")
-    requesteVisitDate = fields.Date(string = "Fecha peticion visita")
+    requestedVisitDate = fields.Date(string = "Fecha peticion visita")
     visitReply = fields.Boolean(string = "Respuesta a peticion")
     visited = fields.Boolean(string = "Visitado")
     visitDate = fields.Date(string = "Fecha visita")

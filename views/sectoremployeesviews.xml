@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="emex51_module_sectoremployees_list">
+          <field name="name">sectoremployees.list</field>
+          <field name="model">emex51_module.sectoremployees</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="workDate"/>
+              <field name="employees"/>
+            </tree>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_sectoremployees_form">
+          <field name="name">sectoremployees.form</field>
+          <field name="model">emex51_module.sectoremployees</field>
+          <field name="arch" type="xml">
+            <form string="Sector Form">
+                <sheet>
+                    <group colspan = "4">
+                        <group>
+                            <field name="workDate"/>
+                            <field name="employees"/>
+                        </group>
+                        <group>
+                            <field name="sectors"/>
+                        </group>     
+                    </group>    
+                </sheet>
+            </form>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_sectoremployees_search">
+          <field name="name">sectoremloyees.search</field>
+          <field name="model">emex51_module.sectoremployees</field>
+          <field name="arch" type="xml">
+            <search>
+              <field name="workDate"/>
+              <field name="employees"/>
+            </search>
+          </field>
+        </record>
+    </data>   
+</odoo>

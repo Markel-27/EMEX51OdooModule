@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="emex51_module_visitor_list">
+          <field name="name">visitor.list</field>
+          <field name="model">emex51_module.visitor</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="dni"/>
+              <field name="email"/>
+            </tree>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_visitor_form">
+          <field name="name">visitor.form</field>
+          <field name="model">emex51_module.visitor</field>
+          <field name="arch" type="xml">
+              <form string="Visitor Form">
+                  <sheet>
+                      <group colspan = "4">
+                          <group>
+                              <field name="name" string = "Nombre"/>
+                                <field name="email" string = "Email"/>
+                                <field name="login" string = "Login"/>
+                                <field name="password" string = "Password"/>
+                          </group>
+                          <group>
+                            <field name="dni"/>
+                            <field name="employee" readonly = "1"/>
+                          </group>                
+                      </group>
+                      <notebook colspan = "4">
+                            <page name="sectors" string="Sectores Visitados">
+                                <field name="visitedSectors"/>
+                                Sectores que ha visitado el visitante.
+                            </page> 
+                            <page name="info" string="Informacion de la visita">
+                                <group>
+                                    <field name="requestedVisitDate"/>
+                                    <field name="visitReply"/>
+                                    <field name="visitDate"/>
+                                    <field name="visited"/>                                        
+                                </group>
+                            </page>                                                          
+                        </notebook>
+                  </sheet>
+              </form>    
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_visitor_search">
+          <field name="name">visitor.search</field>
+          <field name="model">emex51_module.visitor</field>
+          <field name="arch" type="xml">
+            <search>
+              <field name="name"/>
+              <field name="dni"/>
+            </search>
+          </field>
+        </record>
+    </data>   
+</odoo>

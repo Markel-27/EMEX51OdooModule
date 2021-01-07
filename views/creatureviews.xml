@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="emex51_module_creature_list">
+          <field name="name">creature.list</field>
+          <field name="model">emex51_module.creature</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name" string = "Nombre Criatura"/>
+              <field name="arrivalDate" string = "Fecha Llegada"/>
+              <field name="species" string = "Especie"/>
+              <field name="sector" string = "Sector"/>
+            </tree>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_creature_form">
+          <field name="name">creature.form</field>
+          <field name="model">emex51_module.creature</field>
+          <field name="arch" type="xml">
+            <form string="Creature Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string = "Nombre Criatura"/>
+                            <field name="arrivalDate" string = "Fecha Llegada"/>
+                        </group>
+                        <group>
+                            <field name="species" string = "Especie"/>
+                            <field name="sector" string = "Sector"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_creature_search">
+          <field name="name">creature.search</field>
+          <field name="model">emex51_module.creature</field>
+          <field name="arch" type="xml">
+            <search>
+              <field name="name" string = "Nombre Criatura"/>
+              <field name="arrivalDate" string = "Fecha Llegada"/>
+              <field name="species" string = "Especie"/>
+              <field name="sector" string = "Sector"/>
+            </search>
+          </field>
+        </record>
+    </data>   
+</odoo>

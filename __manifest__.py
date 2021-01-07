@@ -26,6 +26,16 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/emex51.xml',
+        'views/armyviews.xml',
+        'views/bossviews.xml',
+        'views/employeeviews.xml',
+        'views/sectoremployeesviews.xml',
+        'views/creatureviews.xml',
+        'views/visitorviews.xml',
+        'views/sectorviews.xml',
+        'views/menu.xml',
+        'views/acciones.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

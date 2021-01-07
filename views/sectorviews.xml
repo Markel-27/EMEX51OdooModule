@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="emex51_module_sector_list">
+          <field name="name">sector.list</field>
+          <field name="model">emex51_module.sector</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="tipo"/>
+            </tree>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_sector_form">
+          <field name="name">sector.form</field>
+          <field name="model">emex51_module.sector</field>
+          <field name="arch" type="xml">
+            <form string="Sector Form">
+                <sheet>
+                    <group colspan = "4">
+                        <group>
+                            <field name="name" string="Nombre"/>
+                        </group>
+                        <group>
+                            <field name="tipo" string="Tipo de Sector"/>
+                        </group>
+                        <notebook colspan = "4">
+                            <page string="Contenido">
+                                <field name="content"/>
+                                Contenido del sector, pueden ser armas o criaturas
+                            </page>
+                            <page string="Visitantes">
+                                <field name="visitors"/>
+                                Almacena las personas que han visitado este sector
+                            </page>
+                            <page string="Empleados">
+                                <field name="employees"/>
+                                Contiene los empleados que han trabajad en el sector
+                            </page>                            
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_sector_search">
+          <field name="name">sector.search</field>
+          <field name="model">emex51_module.sector</field>
+          <field name="arch" type="xml">
+            <search>
+              <field name="name"/>
+              <field name="tipo"/>
+            </search>
+          </field>
+        </record>
+    </data>   
+</odoo>

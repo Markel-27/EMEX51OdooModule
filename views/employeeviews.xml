@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="emex51_module_employee_list">
+          <field name="name">employee.list</field>
+          <field name="model">emex51_module.employee</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="wage"/>
+              <field name="email"/>
+            </tree>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_employee_form">
+          <field name="name">employee.form</field>
+          <field name="model">emex51_module.employee</field>
+          <field name="arch" type="xml">
+              <form string="Employee Form">
+                  <sheet>
+                      <group colspan = "4">
+                          <group>
+                              <field name="name" string = "Nombre"/>
+                                <field name="email" string = "Email"/>
+                                <field name="login" string = "Login"/>
+                                <field name="password" string = "Password"/>
+                          </group>
+                          <group>
+                            <field name="wage"/>
+                            <field name="jobPosition"/>
+                            <field name="boss" readonly = "1"/>
+                          </group>                
+                      </group>
+                      <notebook colspan = "4">
+                            <page string="Visitantes">
+                                <field name="visitors"/>
+                                Contiene los visitantes que gestiona el empleado.
+                            </page> 
+                            <page string="Sectores">
+                                <field name="sectors"/>
+                                Contiene los sectores en los que ha trabajado el empleado
+                            </page>                                                          
+                        </notebook>
+                  </sheet>
+              </form>    
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_employee_search">
+          <field name="name">employee.search</field>
+          <field name="model">emex51_module.employee</field>
+          <field name="arch" type="xml">
+            <search>
+              <field name="name"/>
+              <field name="wage"/>
+              <field name="email"/>
+            </search>
+          </field>
+        </record>
+    </data>   
+</odoo>

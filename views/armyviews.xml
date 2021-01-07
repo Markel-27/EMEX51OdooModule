@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="emex51_module_army_list">
+          <field name="name">army.list</field>
+          <field name="model">emex51_module.army</field>
+          <field name="arch" type="xml">
+            <tree>
+                <field name="name" string = "Nombre del Arma"/>
+                <field name="arrivalDate" string = "Fecha Llegada"/>
+                <field name="ammunition" string = "Municion"/>
+                <field name="sector" string = "Sector"/>
+            </tree>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_army_form">
+          <field name="name">army.form</field>
+          <field name="model">emex51_module.army</field>
+          <field name="arch" type="xml">
+            <form string="Army Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="arrivalDate"/>
+                        </group>
+                        <group>
+                            <field name="ammunition"/>
+                            <field name="sector"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_army_search">
+          <field name="name">army.search</field>
+          <field name="model">emex51_module.army</field>
+          <field name="arch" type="xml">
+            <search>
+                <field name="name" string = "Nombre del Arma"/>
+                <field name="arrivalDate" string = "Fecha Llegada"/>
+                <field name="ammunition" string = "Municion"/>
+                <field name="sector" string = "Sector"/>
+            </search>
+          </field>
+        </record>
+    </data>   
+</odoo>

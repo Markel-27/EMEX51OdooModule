@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="emex51_module_boss_list">
+          <field name="name">boss.list</field>
+          <field name="model">emex51_module.boss</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="wage"/>
+              <field name="email"/>
+            </tree>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_boss_form">
+          <field name="name">boss.form</field>
+          <field name="model">emex51_module.boss</field>
+          <field name="arch" type="xml">
+            <form string="Boss Form">
+                <sheet>
+                    <group colspan = "4">
+                        <group>
+                            <field name="name" string = "Nombre"/>
+                            <field name="email" string = "Email"/>
+                            <field name="login" string = "Login"/>                    
+                        </group>
+                        <group>
+                            <field name="password" string = "Password"/>
+                            <field name="wage"/>
+                            <field name="login_date" string = "Last Access"/>
+                        </group>
+                    </group>
+                        <notebook colspan = "4">
+                            <page string="Empleados">
+                                <field name="employees"/>
+                                Contiene los empleados que han trabajad en el sector
+                            </page>                            
+                        </notebook>
+                </sheet>
+            </form>
+          </field>
+        </record>
+        <record model="ir.ui.view" id="emex51_module_boss_search">
+          <field name="name">boss.search</field>
+          <field name="model">emex51_module.boss</field>
+          <field name="arch" type="xml">
+            <search>
+              <field name="login"/>
+              <field name="wage"/>
+              <field name="email"/>
+            </search>
+          </field>
+        </record>
+    </data>   
+</odoo>
