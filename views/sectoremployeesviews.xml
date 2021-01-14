@@ -8,7 +8,7 @@
           <field name="arch" type="xml">
             <tree>
               <field name="workDate"/>
-              <field name="employees"/>
+              <field name="employee"/>
             </tree>
           </field>
         </record>
@@ -21,10 +21,10 @@
                     <group colspan = "4">
                         <group>
                             <field name="workDate"/>
-                            <field name="employees"/>
+                            <field name="employee"/>
                         </group>
                         <group>
-                            <field name="sectors"/>
+                            <field name="sector"/>
                         </group>     
                     </group>    
                 </sheet>
@@ -37,7 +37,7 @@
           <field name="arch" type="xml">
             <search>
               <field name="workDate"/>
-              <field name="employees"/>
+              <field name="employee"/>
             </search>
           </field>
         </record>

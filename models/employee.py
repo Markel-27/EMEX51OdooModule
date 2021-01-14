@@ -8,6 +8,7 @@ class Employee (models.Model):
 #anadiremos atributos extra que necesitamos para nuestro modulo
     _name = "emex51_module.employee"
     _inherit = 'res.users'
+    
     # Declaracion de los atributos de tipo basico de en Odoo.
     wage = fields.Float(string = "Salario")
     jobPosition = fields.Char(string = "Puesto de trabajo")
@@ -18,5 +19,5 @@ class Employee (models.Model):
     boss = fields.Many2one('emex51_module.boss',ondelete ='set null',string="Jefe")
     #Un empleado gestiona varios sectores, un sector en gestionado por varios empleados,
 # NM con atributos clase intermedia dos 1N
-    sectors = fields.One2many('emex51_module.sectoremployees','employees',string="Sectores")
+    sectors = fields.One2many('emex51_module.sectoremployees','sector',string="Sectores")
 

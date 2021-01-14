@@ -13,6 +13,17 @@
                 </p>
             </field>
         </record>
+        <record model="ir.actions.act_window" id="emex51_module_visitor_action">
+            <field name="name">Visitantes Area51</field>
+            <field name="res_model">emex51_module.visitor</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the first Visitor
+                </p>
+            </field>
+        </record> 
         <record model="ir.actions.act_window" id="emex51_module_boss_action">
             <field name="name">Jefes Area51</field>
             <field name="res_model">emex51_module.boss</field>
@@ -56,12 +67,6 @@
                     Create the first Creature
                 </p>
             </field>
-        </record>
-        <record model="ir.actions.act_window" id="emex51_module_visitor_action">
-            <field name="name">Visitantes Area51</field>
-            <field name="res_model">emex51_module.visitor</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
         </record>
         <record model="ir.actions.act_window" id="emex51_module_sectoremployees_action">
             <field name="name">Empleados Sector Management Area51</field>

@@ -15,5 +15,5 @@ class SectorEmployees (models.Model):
 # field reserved.
     workDate = fields.Date(string ="Fecha de trabajo")
     #Declaracion de los atributos relacionales con otras clases.
-    employees = fields.Many2one('emex51_module.employee',ondelete ='set null',string="Empleados")
-    sectors = fields.Many2one('emex51_module.sector',ondelete ='set null',string="Sectores")
+    employee = fields.Many2one('emex51_module.employee',ondelete ='set null',string="Empleados")
+    sector = fields.Many2one('emex51_module.sector',ondelete ='set null',string="Sectores")

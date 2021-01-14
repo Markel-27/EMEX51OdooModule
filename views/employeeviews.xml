@@ -29,7 +29,8 @@
                           <group>
                             <field name="wage"/>
                             <field name="jobPosition"/>
-                            <field name="boss" readonly = "1"/>
+                            <field name="boss"/>
+                            <field name="login_date" string = "Last Access"/>
                           </group>                
                       </group>
                       <notebook colspan = "4">

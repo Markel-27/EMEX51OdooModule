@@ -35,7 +35,6 @@
         'views/visitorviews.xml',
         'views/sectorviews.xml',
         'views/menu.xml',
-        'views/acciones.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

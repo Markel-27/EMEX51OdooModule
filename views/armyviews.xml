@@ -3,7 +3,7 @@
 <odoo>
     <data>
         <record model="ir.ui.view" id="emex51_module_army_list">
-          <field name="name">army.list</field>
+          <field name="name"></field>
           <field name="model">emex51_module.army</field>
           <field name="arch" type="xml">
             <tree>
