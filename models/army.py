@@ -13,6 +13,7 @@ class Army (models.Model):
     # Declaracion de los atributos de tipo basico de en Odoo.
     #El atributo string es como se ve en el form de la view de odoo. id lo crea odoo. Es un field reserved.
     ammunition = fields.Integer(required = True, string = "Municion Total")
+    sector = fields.Many2one ('emex51_module.sector', ondelete = 'cascade', string = "Sector", domain=[('tipo','=','army')])
     
     @api.constrains('ammunition')
     def _check_ammunition(self):

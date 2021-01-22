@@ -1,0 +1,52 @@
+<odoo>
+    <template id="module_progress_report_template">
+        <t t-call="report.html_container">
+            <t t-call="report.external_layout">                
+                <div class="page">                    
+                    <t t-foreach="docs" t-as="d">
+                        <div class="col-md-12">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Jefe</th>
+                                        <th>Empleado</th>
+					<th>Sector</th>
+                                        <th>Visitante</th>
+                                    </tr>
+                               </thead>
+                               <tbody>
+                                    <t t-set="user_ids_sorted"/>
+                                    <t t-foreach="user_ids_sorted" t-as="t">
+					<tr>
+                                            <td>
+                                            	<span t-field="t.boss.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="t.employee.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="t.sector.name"/>
+                                            </td>
+                                            <td>
+                                               <li><span t-field="t.visitor.dni"/></li>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <report id="module_progress_report"
+            model="models.model"
+            string="Module Progress"
+            report_type="qweb-pdf"
+            name="models.module_progress_report_template"
+            file="module_progress_report_template"
+    />
+</odoo>

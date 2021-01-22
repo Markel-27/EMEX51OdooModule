@@ -35,6 +35,7 @@
         'views/visitorviews.xml',
         'views/sectorviews.xml',
         'views/menu.xml',
+        'report/reportModule.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

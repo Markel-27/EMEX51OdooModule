@@ -12,6 +12,8 @@ class Employee (models.Model):
     # Declaracion de los atributos de tipo basico de en Odoo.
     wage = fields.Float(string = "Salario")
     jobPosition = fields.Char(string = "Puesto de trabajo")
+    
+    
     #Declaracion de los atributos relacionales con otras clases.
     #Un empleado gestiona a varios visitantes
     visitors = fields.One2many('emex51_module.visitor','employee',string="Visitantes")

@@ -12,3 +12,5 @@ class Creature (models.Model):
     # Declaracion de los atributos de tipo basico de en Odoo. id lo crea odoo. 
     #Es un field reserved.
     species = fields.Char(required = True, string = "Especie")
+    
+    sector=fields.Many2one ('emex51_module.sector',ondelete = 'cascade', string = "Sector", domain=[('tipo','=','creature')])
