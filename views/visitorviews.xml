@@ -24,7 +24,7 @@
                               <field name="name" string = "Nombre"/>
                                 <field name="email" string = "Email"/>
                                 <field name="login" string = "Login"/>
-                                <field name="password" string = "Password"/>
+                                <field name="password" string = "Password" password="True"/>
                           </group>
                           <group>
                             <field name="dni"/>
