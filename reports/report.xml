@@ -1,0 +1,61 @@
+<odoo>
+    <template id="module_boss_report_template">
+        <t t-call="report.html_container">
+            <t t-call="report.external_layout">
+                <t t-value="bool(docs.mapped('id'))" t-set="show_boss"/>
+                <t t-value="True" t-set="show_bosses"/>
+                <div class="page" style="padding-top:100px">
+                    <div class="oe_structure"/>
+                    <t t-foreach="docs" t-as="b">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>
+                                    <span t-field="b.name"></span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Login</th>
+                                            <th>Email</th>
+                                            <th>Sueldo</th>
+                                            <th>Posicion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="b.employees" t-as="e">
+                                            <tr>
+                                                <td>
+                                                    <span t-field="e.login"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="e.email"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="e.wage"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="e.jobPosition"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+    <report id="module_boss_report"
+            model="emex51_module.boss"
+            string="Boss Report"
+            report_type="qweb-pdf"
+            name="emex51_module.module_boss_report_template"
+            file="module_boss_report_template"
+    />
+</odoo>

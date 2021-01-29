@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_emex51_module_emex51_module,emex51_module.emex51_module,model_emex51_module_emex51_module,,1,0,0,0
+access_boss_boss,boss boss,model_emex51_module_boss,group_boss,1,1,1,1
+access_boss_manager,boss manager,model_emex51_module_boss,group_manager,1,0,0,0
+access_boss_user,boss user,model_emex51_module_boss,group_user,0,0,0,0

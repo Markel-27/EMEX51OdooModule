@@ -24,12 +24,12 @@
                               <field name="name" string = "Nombre"/>
                                 <field name="email" string = "Email"/>
                                 <field name="login" string = "Login"/>
-                                <field name="password" string = "Password"/>
+                                <field name="password" password="True" string = "Password"/>
                           </group>
                           <group>
                             <field name="wage"/>
                             <field name="jobPosition"/>
-                            <field name="boss" readonly = "1"/>
+                            <field name="boss"/>
                           </group>                
                       </group>
                       <notebook colspan = "4">

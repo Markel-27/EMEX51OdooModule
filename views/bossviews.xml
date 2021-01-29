@@ -31,9 +31,8 @@ and open the template in the editor.
                             <field name="login" string = "Login"/>                    
                         </group>
                         <group>
-                            <field name="password" string = "Password"/>
+                            <field name="password" password="True" string = "Password"/>
                             <field name="wage"/>
-                            <field name="login_date" string = "Last Access"/>
                         </group>
                     </group>
                         <notebook colspan = "4">

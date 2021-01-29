@@ -2,6 +2,7 @@
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
 
+#Markel Lopez de Uralde
 from odoo import models,fields
 class Visitor (models.Model):
     #Vamos a hacer una herencia de la clase user que existe en Odoo,
